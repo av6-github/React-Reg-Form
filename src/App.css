@@ -1,0 +1,242 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a; /* Black background */
+  color: #f5f5f5; /* Light text color for readability */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  min-height: 100vh;
+}
+
+/* Main container styling */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Maximum width for larger screens */
+  padding: 20px;
+}
+
+/* Centering the title */
+.title {
+  color: #1e90ff;
+  text-align: center;
+  margin-bottom: 40px; /* Increased margin for better spacing */
+  font-size: 2.5em; /* Larger font size for prominence */
+}
+
+/* Content wrapper: form and QR code side by side */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #2a2a2a; /* Darker shade for the container */
+  border-radius: 15px;
+  padding: 40px; /* Reduced padding for better desktop view */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Form container */
+.form-container {
+  flex: 2; /* Takes up twice the space compared to QR code */
+  padding-right: 40px; /* Space between form and QR code */
+}
+
+/* QR code container */
+.qr-code-container {
+  flex: 1; /* Takes up less space */
+  text-align: center;
+  padding-left: 20px; /* Padding to separate from form */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* QR code heading */
+.qr-code-container h2 {
+  color: #1e90ff;
+  margin-bottom: 20px; /* Increased margin for better spacing */
+  font-size: 1.5em;
+}
+
+/* QR code placeholder */
+.qr-placeholder {
+  background-color: #333333;
+  border: 2px dashed #555555; /* Dashed border for the placeholder */
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px; /* Increased size for better visibility */
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.qr-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+/* Form styling */
+form label {
+  display: block;
+  margin-top: 20px; /* Increased margin for better spacing */
+  font-weight: bold;
+  color: #dcdcdc;
+  font-size: 1em;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+  width: 100%;
+  padding: 12px; /* Increased padding for better usability */
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333333;
+  color: #f5f5f5;
+  font-size: 1em;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus {
+  border: 1px solid #1e90ff; /* Blue outline on focus */
+}
+
+/* Radio buttons styling */
+.radio-group {
+  margin-top: 10px;
+}
+
+.radio-group input[type="radio"] {
+  display: none; /* Hide default radio buttons */
+}
+
+.radio-group input[type="radio"] + label {
+  display: inline-block;
+  background-color: #333333;
+  color: #f5f5f5;
+  padding: 10px 20px; /* Increased padding for better click area */
+  margin-right: 15px; /* Increased margin between radio buttons */
+  border-radius: 25px; /* More rounded for better aesthetics */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+}
+
+.radio-group input[type="radio"]:checked + label {
+  background-color: #1e90ff;
+  color: white;
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.5); /* Enhanced shadow for selected state */
+}
+
+/* Payment Confirmation heading */
+form h2 {
+  color: #1e90ff;
+  margin-top: 30px; /* Increased margin for better spacing */
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+  width: 100%;
+  background-color: #1e90ff; /* Blue background */
+  color: #ffffff; /* White text */
+  padding: 14px; /* Comfortable padding */
+  margin-top: 25px; /* Add space from the last element */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1em; /* Professional font size */
+  font-weight: bold; /* Bold text for emphasis */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+button[type="submit"]:active {
+  background-color: #003f7f; /* Even darker blue on click */
+  transform: translateY(1px); /* Subtle depress effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Lower shadow on click */
+}
+
+/* Responsive Design for Desktop Focus */
+@media (min-width: 1024px) {
+  .main-container {
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 3em;
+  }
+
+  .content-wrapper {
+    padding: 60px;
+  }
+
+  .form-container {
+    padding-right: 60px;
+  }
+
+  .qr-code-container {
+    padding-left: 40px;
+  }
+
+  .qr-code-container h2 {
+    font-size: 1.75em;
+  }
+
+  .qr-placeholder {
+    width: 250px;
+    height: 250px;
+  }
+
+  form label {
+    font-size: 1.1em;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"] {
+    font-size: 1.1em;
+  }
+
+  .radio-group input[type="radio"] + label {
+    padding: 12px 25px;
+    margin-right: 20px;
+    font-size: 1em;
+  }
+
+  form h2 {
+    font-size: 1.75em;
+  }
+
+  button[type="submit"] {
+    padding: 16px;
+    font-size: 1.1em;
+  }
+}
+
+/* Optional: Smooth Transition for the Entire App */
+* {
+  transition: all 0.3s ease;
+}
